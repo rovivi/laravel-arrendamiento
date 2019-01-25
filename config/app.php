@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Mexico_City',
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -106,7 +106,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -161,7 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-            Yajra\DataTables\DataTablesServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -170,11 +170,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        arrendamiento\Providers\AppServiceProvider::class,
+        arrendamiento\Providers\AuthServiceProvider::class,
+        // arrendamiento\Providers\BroadcastServiceProvider::class,
+        arrendamiento\Providers\EventServiceProvider::class,
+        arrendamiento\Providers\RouteServiceProvider::class,
 
     ],
 
