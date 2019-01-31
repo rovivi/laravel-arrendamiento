@@ -1,6 +1,6 @@
 <?php
 
-namespace arrendamiento\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // register the services that are only used for development
+        if ($this->app->environment() == 'local') {
+            $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
+            $this->app->register('Backpack\Generators\GeneratorsServiceProvider');
+        }
     }
 }

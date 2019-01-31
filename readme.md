@@ -1,32 +1,66 @@
-## About Laravel
+# Backpack\Demo
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Laravel BackPack's demo, which includes all Backpack packages.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+> ### Security updates and breaking changes
+> Please **[subscribe to the Backpack Newsletter](http://backpackforlaravel.com/newsletter)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+![Example generated CRUD interface](https://dl.dropboxusercontent.com/u/2431352/backpack_base_login.png)
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
+## Install
+
+1) Run in your terminal:
+
+``` bash
+git clone https://github.com/Laravel-Backpack/demo.git backpack-demo
+```
+
+2) Set your database information in your .env file (use the .env.example as an example);
+
+3) Run in your backpack-demo folder:
+``` bash
+composer install
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+```
+
+## Usage 
+
+1. Your admin panel is available at http://localhost/backpack-demo/admin
+2. Login with email ```admin@example.com```, password ```admin```
+3. [optional] You can register a different account, to check out the process and see your gravatar inside the admin panel. 
+4. By default, registration is open only in your local environment. Check out ```config/backpack/base.php``` to change this and other preferences.
+
+Note: Depending on your configuration you may need to define a site within NGINX or Apache; Your URL domain may change from localhost to what you have defined.
+
+![Example generated CRUD interface](https://dl.dropboxusercontent.com/u/2431352/backpack_base_dashboard.png)
+
+## Change log
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
 
-## Security Vulnerabilities
+## Security
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover any security related issues, please email hello@tabacitu.ro instead of using the issue tracker.
+
+Please **[subscribe to the Backpack Newsletter](http://backpackforlaravel.com/newsletter)** so you can find out about any security updates, breaking changes or major features. We send an email every 1-2 months.
+
+## Credits
+
+- [Cristian Tabacitu][link-author]
+- [All Contributors][link-contributors]
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Backpack is free for non-commercial use and 39 EUR/project for commercial use. Please see [License File](LICENSE.md) and [backpackforlaravel.com](https://backpackforlaravel.com/#pricing) for more information.
+
+[link-author]: http://tabacitu.ro
+[link-contributors]: ../../contributors
