@@ -29,14 +29,30 @@ class ClientCrudController extends CrudController
         /*
         |--------------------------------------------------------------------------
         | CrudPanel Configuration
-        |--------------------------------------------------------------------------
+        |--------------------------------------------------------------------------                            
         */
+        $this->crud->addColumn([    // SELECT
+          'label'     => 'Nombre del cliente',
+          'type'      => 'text',
+          'name'      => 'name',                               
+        ]);
+        $this->crud->addColumn([    // SELECT
+        'label'     => 'Teléfono',
+        'type'      => 'text',
+        'name'      => 'phone1',                               
+        ]);
+        $this->crud->addColumn([    // SELECT
+      'label'     => 'R.F.C.',
+      'type'      => 'text',
+      'name'      => 'rfc',                               
+        ]);
+
 
         // TODO: remove setFromDb() and manually define Fields and Columns
      //   $this->crud->setFromDb();
 
 
-        $this->crud->setColumns(['Nombre', 'R.F.C.', 'Telefono','phone2','extras','email']);
+        
         $this->crud->addField([
           'name' => 'name',
           'type' => 'text',
@@ -89,17 +105,9 @@ class ClientCrudController extends CrudController
             'placeholder' => 'correo@ejemplo.net',          
           ]
         ]);
-       /*$this->crud->addField([
-         'nullable' =>'true',
-          'name' => 'birth',
-          'tab' => "Extras",
-          'type' => 'date_picker',
-          'label' => "Nacimiento",
-          'placeholder' => '01/01/2000',          
+       /**--------------FILTERS------------------- */
 
-        ]);*/
-
-
+   
 
         // add asterisk for fields that are required in ClientRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');

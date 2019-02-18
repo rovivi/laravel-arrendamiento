@@ -24,7 +24,7 @@ class ServiceCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Service');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/service');
-        $this->crud->setEntityNameStrings('service', 'services');
+        $this->crud->setEntityNameStrings('Servicio', 'Servicios');
 
 
         /*-------Field Colums------ */

@@ -28,6 +28,10 @@ class ContratoCrudController extends CrudController
 
 
 
+
+        $this->crud->addButtonFromModelFunction('line', 'open_google', 'generatePDF', 'end'); // add a button whose HTML is returned by a method in the CRUD model
+        $this->crud->addButtonFromModelFunction('line', 'custom_services', 'editServices', 'beginning'); // add a button whose HTML is returned by a method in the CRUD model
+
       
         $this->crud->addColumn([    // SELECT
             'label'     => 'Nombre del evento',

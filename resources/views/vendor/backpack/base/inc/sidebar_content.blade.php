@@ -1,6 +1,9 @@
-<li><a href="{{ backpack_url('dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 
-<li><a href="{{ url('demo') }}"><i class="fa fa-user"></i> <span>{{ trans('demo') }}</span></a></li>
+
+
+
+<li><a href='{{ backpack_url('contrato') }}'><i class='fa fa-file'></i> <span>Crear contrato</span></a></li>
+
 
 
 <!--<li class="treeview">
@@ -28,9 +31,8 @@
 <li class="treeview">
   <a href="#"><i class="fa fa-group"></i> <span>Usuarios</span> <i class="fa fa-angle-left pull-right"></i></a>
   <ul class="treeview-menu">
-    <li><a href="{{ backpack_url('user') }}"><i class="fa fa-user"></i> <span>Gestionar Usuarios</span></a></li>
-    <li><a href="{{ backpack_url('client') }}"><i class="fa fa-user"></i> <span>Cliente</span></a></li>
-
+    <!--<li><a href="{{ backpack_url('user') }}"><i class="fa fa-user"></i> <span>Gestionar Usuarios</span></a></li>-->
+    <li><a href="{{ backpack_url('client') }}"><i class="fa fa-user"></i> <span>Clientes</span></a></li>
   </ul>
 </li>
 
@@ -45,4 +47,3 @@
 </li>
 
 
-<li><a href='{{ backpack_url('contrato') }}'><i class='fa fa-contrato'></i> <span>contratos</span></a></li>

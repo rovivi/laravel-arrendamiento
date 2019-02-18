@@ -33,6 +33,16 @@ class Contrato extends Model
         return $this->belongsTo(Client::class);
 
     }
+    public function generatePDF($crud = false)
+    {
+        return '<a class="btn btn-xs btn-default" target="_blank" href="/make_contrato?=id'.urlencode($this->id).'" data-toggle="tooltip" title="Genarar contrato."><i class="fa fa-cogs"></i> Contrato</a>';
+    }
+
+    public function editServices($crud = false)
+    {
+        return '<a class="btn btn-xs btn-default" target="_blank" href="/edit?=id'.urlencode($this->id).'" data-toggle="tooltip" title="Gestionar Servicios"><i class="fa fa-cutlery"></i> Servicios</a>';
+    }
+
 
 
     /*

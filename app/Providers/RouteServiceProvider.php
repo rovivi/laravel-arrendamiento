@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use DB;
 use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
@@ -75,5 +76,44 @@ class RouteServiceProvider extends ServiceProvider
         ], function ($router) {
             require base_path('routes/api.php');
         });
+
+        Route::group([
+            'middleware' => ['api', 'cors'],
+            'namespace' => $this->namespace,
+            'prefix' => 'api',
+        ], function ($router) {
+            Route::any('getService', function () {
+                $data1=DB::table('services')->get();
+                $data2=DB::table('service_pack')
+                ->join('services','services.id','=','service_pack.services_id')
+                ->get();
+                return json_encode($data1);
+            });
+
+
+
+
+Route::any('getS/{id}', function ($id) {
+    $data1=DB::table('service_pack')
+    ->where('contrato_id','=',$id)
+    ->select('services_id as id','count')
+    ->get();
+return json_encode($data1);
+});
+
+
+//Route::controller('users', 'UserController');
+Route::resource('pack', 'packService');
+
+        });
+
+
+
+
+
+
+
+
+
     }
 }

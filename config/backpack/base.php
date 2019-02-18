@@ -15,8 +15,8 @@ return [
     'project_name' => 'Ceconexpo arrendamiento',
 
     // Menu logos
-    'logo_lg'   => '<b>Arrendamiento</b>',
-    'logo_mini' => '<b>A</b>',
+    'logo_lg'   => '<b>CECONEXPO</b> <img src="/images/logo_ceconexpo.png" class="img-fluid" alt="Responsive image"> ' ,
+    'logo_mini' => '<b>C</b>',
 
     // Developer or company name. Shown in footer.
     'developer_name' => 'Rodrigo Vidal',
@@ -120,7 +120,7 @@ return [
     // Other options:
     // - placehold (generic image with his first letter)
     // - example_method_name (specify the method on the User model that returns the URL)
-    'avatar_type' => 'placehold',
+    'avatar_type' => 'get_gravatar',
 
     /*
     |--------------------------------------------------------------------------

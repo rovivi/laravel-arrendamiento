@@ -29,4 +29,7 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register('Backpack\Generators\GeneratorsServiceProvider');
         }
     }
+
+
+    
 }

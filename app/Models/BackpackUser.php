@@ -32,7 +32,14 @@ class BackpackUser extends User
      * @return string
      */
     public function getEmailForPasswordReset()
-    {
+    { 
         return $this->email;
+    }
+
+
+
+    public function get_gravatar()
+    { 
+        return "/images/logo_ceconexpo.png";
     }
 }

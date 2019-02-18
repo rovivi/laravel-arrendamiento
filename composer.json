@@ -18,7 +18,9 @@
         "backpack/newscrud": "^2.1",
         "backpack/permissionmanager": "4.0.*",
         "spatie/laravel-translatable": "^2.1",
-        "barryvdh/laravel-elfinder": "^0.3.12"
+        "barryvdh/laravel-elfinder": "^0.3.12",
+        "barryvdh/laravel-dompdf": "^0.8.3"
+        
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
