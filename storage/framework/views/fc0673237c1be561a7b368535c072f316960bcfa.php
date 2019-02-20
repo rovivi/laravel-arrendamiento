@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <script> let id = <?php echo e($id); ?>;</script>
     <div class="form" id="formselect">
         <div class="app" v-show="loaded"  style=" display: none;">
             <div class="row ">
@@ -30,7 +31,7 @@
                     <lista v-for="service in serviceSearch()" :service="service" />
                 </div>
                 <div class="col col-md-6  justify-content-md-right  ">
-                	<br><br><center> <h3>Cotización</h3> </center>
+                	<br><br> <h3>Cotización</h3>
                     <div class="row position-fixed center pre-scrollable container-fluid " style="  height: 100%;">
                         <table-active :services="activeService()"  :total="totalCoti()" inline-template>
                             <div class="">
@@ -57,10 +58,8 @@
                                         <td><label class="btn btn-success" v-on:click="hola">Guardar</label></td>
                                     </tr>                                    
                                 </tbody>
-                                </table>
-                            	
-                            </div>
-                            
+                                </table>                            	
+                            </div>                            
                         </table-active>
                     </div>
                 </div>
@@ -69,14 +68,14 @@
         <!--<spinner class= "spinner"></spinner> -->
         <div class="loader" v-if="!loaded">Cargando</div>
     </div>
-    <!-- Scripts----------------------------------->
+    <!-- Scripts---->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-    <script src="js/loader.js"></script>
+    <script src="../js/loader.js"></script>
     <!---------Templates----------------------->
     <template id="table-temp">
     </template>

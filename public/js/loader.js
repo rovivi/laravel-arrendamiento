@@ -1,6 +1,6 @@
 //let route = "http://127.0.0.1:8000/";
-let route = "/";
-let id = 2;
+let route = "../";
+
 var activeServices = [];
 var services = [];
 
@@ -82,7 +82,10 @@ Vue.component('table-active', {
                 .then(function(response) {
                     console.log(response);
                     if (response.data=="ok"){
-                        window.location.replace("/demo1");
+                        window.location.replace("/control/contrato");
+                    }
+                    else{
+                        alert("Algo anda mal consulta al administrador!");
                     }
                 })
                 .catch(function(error) {

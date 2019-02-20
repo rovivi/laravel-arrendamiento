@@ -21,6 +21,9 @@ class CreateClientTable extends Migration
             $table->string('phone2',15)->nullable();
             $table->string('extras',1000)->nullable();
             $table->string('email',250);
+            $table->string('datenum',250);
+            $table->string('col',250);
+            $table->string('postal_code',250);
         //    $table->string('birth')->nullable();
             $table->timestamps();
         });

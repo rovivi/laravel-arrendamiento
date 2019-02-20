@@ -108,12 +108,5 @@ Route::resource('pack', 'packService');
         });
 
 
-
-
-
-
-
-
-
     }
 }

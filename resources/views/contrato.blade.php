@@ -23,22 +23,22 @@
 table,thead,tbody,tfoot,tr, td,th{
   text-align: center;
   margin: auto;
-  border:1px solid #dedede;
-  padding: 1rem;
-  width: 50%;
+  //border:1px solid #dedede;
+  padding: 0.5rem;
+  width: 80%;
 }
-.table    { display: table; width: 50%; }
-.tr       { display: table-row;  }
+.table    { display: table; width: 100%; }
+.tr       { display: table-row;   }
 .thead    { display: table-header-group }
 .tbody    { display: table-row-group }
 .tfoot    { display: table-footer-group }
 .col      { display: table-column }
 .colgroup { display: table-column-group }
-.td, .th   { display: table-cell; width: 50%; }
+.td, .th   { display: table-cell; width: 50%;  }
 .caption  { display: table-caption }
 
 .table,.thead,.tbody,.tfoot,.tr,.td,.th{
-  text-align: center;
+  text-align: left;
   margin: auto;
   padding: 1rem;
 }
@@ -48,6 +48,9 @@ table,thead,tbody,tfoot,tr, td,th{
   border:none;
   padding: 0;
   margin-bottom: 5rem;
+}
+.trNoBorder{
+border: none;
 }
 
 .th{
@@ -63,7 +66,7 @@ table,thead,tbody,tfoot,tr, td,th{
     </style>
 </head>
 <body>
-        <header>CONTRATO No {{$c->id}}                  <img  class="img1" src ="logo1.png"  />         <img  class="img2" src ="logo2.png"  />        </header>
+        <header>CONTRATO No {{$c->id}} <img  class="img1" src ="logo1.png"  />         <img  class="img2" src ="logo2.png"  />        </header>
         <div class="prosa">
         <br><br><p ><span >CONTRATO DE ARRENDAMIENTO Y/O PRESTACI&Oacute;N DE SERVICIOS DE ALIMENTOS Y BEBIDAS, QUE CELEBRAN POR UNA PARTE </span><strong><u><span >OSCAR CELIS SILVA, </span></u></strong><span>&nbsp;CON EL CAR&Aacute;CTER DE DIRECTOR GENERAL DEL ORGANISMO P&Uacute;BLICO DESCENTRALIZADO DENOMINADO &ldquo;CENTRO DE CONVENCIONES DE MORELIA&rdquo;, EN LO SUCESIVO </span><strong><span>&ldquo;LA ARRENDADORA&rdquo;</span></strong><span>&nbsp;Y POR LA OTRA PARTE, </span><strong><u><span >{{ $c->client_name}}</span></u></strong><strong><span>, </span></strong><span>EN LO SUCESIVO </span><strong><span>&ldquo;LA ARRENDATARIA&rdquo; </span></strong><span>EN SU CAR&Aacute;CTER &nbsp;DE </span><strong><u><span >RESPONSABLE DEL EVENTO.</span></u></strong><strong><span>&nbsp;</span></strong></p>
                 <p><span >QUIENES SE SUJETAN AL TENOR DE LAS SIGUIENTES DECLARACIONES Y CL&Aacute;USULAS.</span></p>
@@ -76,7 +79,7 @@ table,thead,tbody,tfoot,tr, td,th{
                 <p ><span >1.5.- Que el inmueble forma parte del Centro de Convenciones de Morelia y no tiene el inmueble grav&aacute;menes, restricciones o sentencias judiciales que lo afecten, mismo que tiene las siguientes caracter&iacute;sticas:</span><strong><span>&nbsp;</span></strong><strong><u><span >&Aacute;REAS JARDINADAS, &Aacute;REAS DE CONSTRUCCION, PISOS DE PORCELANATO, PISOS ALFOMBRADOS, ENTRE OTROS</span></u></strong><strong><span>,</span></strong><span>&nbsp;y que cuenta con los siguientes servicios: </span><strong><u><span >AGUA POTABLE, LUZ, AIRE ACONDICIONADO Y EQUIPO, ENTRE OTROS</span></u></strong><span>, estando al corriente en los pagos respectivos.</span></p>
                 <p ><span >1.6. Que tiene su domicilio para todos efectos legales derivados del presente contrato en avenida Ventura Puente esquina con avenida camelinas s/n de la colonia F&eacute;lix Ireta de esta ciudad de Morelia, Michoac&aacute;n.</span></p>
                 <p ><strong><span>2.- DECLARA &ldquo;LA ARRENDATARIA&rdquo;</span></strong></p>
-                <p ><strong><span>2.1.- </span></strong><span>Que su registro federal de contribuyentes es:</span><strong><span>&nbsp;</span></strong><strong><u><span ></span></u></strong></p>
+                <p ><strong><span>2.1.- </span></strong><span>Que su registro federal de contribuyentes es:</span><strong><span> {{$c->rfc}}   </span></strong><strong><u><span ></span></u></strong></p>
                 <p ><span>2.2.- Que no se encuentra en los supuestos de impedimento para la celebraci&oacute;n de contratos que se&ntilde;ala el art&iacute;culo 32 de la Ley de Adquisici&oacute;n, Arrendamiento, &nbsp;y Prestaci&oacute;n &nbsp;de Servicios &nbsp;Relacionados con Bienes Muebles e Inmuebles del Estado de Michoac&aacute;n de Ocampo.</span></p>
                 <p ><span>2.3. Que conoce el inmueble y acepta recibir en arrendamientos el mismo, en las condiciones que se encuentra actualmente.</span></p>
                 <p ><span>2.4. Que tiene su domicilio para todos los efectos legales derivados del presente contrato en </span><strong><u><span >-</span></u></strong><span>&nbsp;&nbsp;de la colonia </span><strong><u><span > </span></u></strong><span>En la ciudad </span><strong><u><span >MORELIA, MICH.</span></u></strong><span  background: #ffffff;">&nbsp;&nbsp;</span><strong><span  background: #ffffff;">&nbsp;C.P. </span></strong><strong><u><span style="font-family: Calibri; text-decoration: underline; text-underline: single; font-size: 11,0000pt; background: #ffffff;">-</span></u></strong></p>
@@ -84,16 +87,23 @@ table,thead,tbody,tfoot,tr, td,th{
                 <p ><strong><span>3.- DECLARAN &ldquo;LAS PARTES&rdquo;:</span></strong></p>
                 <p style="margin-bottom: 0,0000pt; text-align: justify; text-justify: inter-ideograph;"><span>3.1. Que &ldquo;las partes&rdquo; reconocen la personalidad y/o personer&iacute;a con que comparecen a la celebraci&oacute;n del presente contrato de arrendamiento y/o prestaci&oacute;n de servicios de alimentos y bebidas, est&aacute;n conformes en cumplir y hacer cumplir lo que se consigna, de acuerdo al contenido de las anteriores condiciones comprendidas en las siguientes:</span></p>
                 <p style="text-align: center;"><strong><span >C L &Aacute; U S U L A S:</span></strong></p>
-                <p ><strong><span>PRIMERA- OBJETO, T&Eacute;RMINO, CONTRAPRESTACI&Oacute;N Y FORMA DE PAGO.-</span></strong><span>&nbsp;&ldquo;LA ARRENDADORA&rdquo; &nbsp;entrega en arrendamiento a &ldquo;LA ARRENDATARIA&rdquo;, quien recibe el inmueble denominado </span><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;">&ldquo;-&rdquo; </span></u></strong><span>ubicado dentro de las instalaciones del Centro de Convenciones de Morelia, quien solamente podr&aacute; realizar el evento </span><u><span >&ldquo;</span></u><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;">-&rdquo;</span></u></strong><strong><span style="font-family: Calibri; text-transform: uppercase; font-size: 11,0000pt;">&nbsp;</span></strong><span>que tendr&aacute; verificativo en los d&iacute;as </span><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;"></span></u></strong><strong><u><span >&nbsp;</span></u></strong><span>comprendido de las </span><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;">- </span></u></strong><span>&nbsp;horas exclusivas, con una asistencia aproximada de </span><strong><u><span >-</span></u></strong><strong><span>&nbsp;</span></strong><span>personas. Por este concepto &ldquo;LA ARRENDATARIA&rdquo; se compromete a cubrir la cantidad de </span><strong><span>$ </span></strong><strong><u><span ></span></u></strong><strong><span>&nbsp;</span></strong><span>m&aacute;s el impuesto al valor agregado. &nbsp;</span><strong><u><span >SE AGREGAN POR SERVICIOS ADICIONALES: -</span></u></strong><strong><span>&nbsp;</span></strong><span>m&aacute;s el impuesto al valor agregado.</span></p>
+                <p ><strong><span>PRIMERA- OBJETO, T&Eacute;RMINO, CONTRAPRESTACI&Oacute;N Y FORMA DE PAGO.-</span></strong><span>&nbsp;&ldquo;LA ARRENDADORA&rdquo; &nbsp;entrega en arrendamiento a &ldquo;LA ARRENDATARIA&rdquo;, quien recibe el inmueble denominado </span><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;">
+                  
+                  @foreach($servLugares as $serv) 
+                  {{$serv->name}},
+                  @endforeach                
+
+                </span></u></strong><span>ubicado dentro de las instalaciones del Centro de Convenciones de Morelia, quien solamente podr&aacute; realizar el evento </span><u><span ></span></u><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;">
+                  {{$c->name}}
+                </span></u></strong><strong><span style="font-family: Calibri; text-transform: uppercase; font-size: 11,0000pt;">&nbsp;</span></strong><span>que tendr&aacute; verificativo en los d&iacute;as </span><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;"></span></u></strong><strong><u><span >&nbsp;</span></u></strong><span>comprendido de las </span><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;">- </span></u></strong><span>&nbsp;horas exclusivas, con una asistencia aproximada de </span><strong><u><span ></span></u></strong><strong><span>{{$c->people_event}} </span></strong><span>personas. Por este concepto &ldquo;LA ARRENDATARIA&rdquo; se compromete a cubrir la cantidad de </span><strong><span>$ </span></strong><strong><u><span ></span></u></strong><strong><span>&nbsp;</span></strong><span>m&aacute;s el impuesto al valor agregado. &nbsp;</span><strong><u><span >SE AGREGAN POR SERVICIOS ADICIONALES: -</span></u></strong><strong><span>&nbsp;</span></strong><span>m&aacute;s el impuesto al valor agregado.</span></p>
                 <p style="margin-bottom: 0,0000pt; text-align: justify; text-justify: inter-ideograph;"><span>Por lo que respecta a la forma de pago que corresponde al arrendamiento y a la prestaci&oacute;n de servicio de alimentos y bebidas, deber&aacute; ser cubierto de la siguiente manera</span><strong><span>: </span></strong><strong><u><span >EL CLIENTE PAGAR&Aacute; A LA VUELTA DE LA FACTURA</span></u></strong><span>, en el domicilio de </span><strong><span>&ldquo;LA ARRENDADORA&rdquo;</span></strong><span>, que qued&oacute; se&ntilde;alado en la declaraci&oacute;n 1.5 del presente acuerdo de voluntades, mismo que manifiesta conocer.</span></p>
                 <p style="margin-bottom: 0,0000pt; text-align: justify; text-justify: inter-ideograph;"><span>Asimismo, para el caso de que </span><strong><span>&ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>&nbsp;requiera la prestaci&oacute;n de alg&uacute;n servicio adicional, lo solicitar&aacute; con anticipaci&oacute;n y por escrito a </span><strong><span>&ldquo;LA ARRENDADORA&rdquo;</span></strong><span>, qui&eacute;n determinar&aacute; el costo del servicio adicional, cotiz&aacute;ndolo separadamente de la totalidad del arrendamiento y/o prestaci&oacute;n de servicios de alimentos y bebidas contratados, realiz&aacute;ndose el contrato respectivo.</span></p>
                 <p style="margin-bottom: 0,0000pt; text-align: justify; text-justify: inter-ideograph;"><span>El pago tendr&aacute; que ser </span><strong><span>CUBIERTO EN SU TOTALIDAD</span></strong><span>, con un m&iacute;nimo de </span><strong><span>8 (ocho) d&iacute;as</span></strong><span>&nbsp;de anticipaci&oacute;n al evento; de manera que, de no cumplirse esta disposici&oacute;n, el Centro de Convenciones de Morelia dar&aacute; por cancelado la realizaci&oacute;n del evento; de igual forma, no se har&aacute; devoluci&oacute;n por los adelantos que se hubiesen hecho en su momento.</span></p>
                 <p style="margin-bottom: 0,0000pt; text-align: justify; text-justify: inter-ideograph;"><strong><span>&nbsp;</span></strong></p>
-                <p ><strong><span>SEGUNDA.-</span></strong><span>&nbsp;</span><strong><span>DEL DEP&Oacute;SITO DE LA GARANT&Iacute;A</span></strong><span>.- </span><strong><span>&ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>&nbsp;entregar&aacute; el pago en garant&iacute;a de la siguiente manera: se entregar&aacute; la cantidad de </span><strong><span>$XXX</span></strong><span>&nbsp;a la firma del presente acuerdo de voluntades, en cantidad de dep&oacute;sito, con el objeto de responder por cualquier da&ntilde;o y perjuicio que pudiera ocasionar al bien propiedad de </span><strong><span>&ldquo;LA ARRENDADORA&rdquo;</span></strong><span>, derivados del presente contrato. </span></p>
+                <p ><strong><span>SEGUNDA.-</span></strong><span>&nbsp;</span><strong><span>DEL DEP&Oacute;SITO DE LA GARANT&Iacute;A</span></strong><span>.- </span><strong><span>&ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>&nbsp;entregar&aacute; el pago en garant&iacute;a de la siguiente manera: se entregar&aacute; la cantidad de </span><strong><span>${{$c->deposit}}</span></strong><span>&nbsp;a la firma del presente acuerdo de voluntades, en cantidad de dep&oacute;sito, con el objeto de responder por cualquier da&ntilde;o y perjuicio que pudiera ocasionar al bien propiedad de </span><strong><span>&ldquo;LA ARRENDADORA&rdquo;</span></strong><span>, derivados del presente contrato. </span></p>
                 <p ><span>Dicha cantidad o su saldo ser&aacute; devuelto a </span><strong><span>&ldquo;LA ARRENDATARIA&rdquo; </span></strong><span>una vez que esta haya cumplido todas y cada una de las obligaciones derivadas del presente acuerdo de voluntades a favor de </span><strong><span>&ldquo;LA ARRENDADORA&rdquo;. </span></strong></p>
                 <p ><span>Este dep&oacute;sito por ning&uacute;n motivo ser&aacute; aplicable al pago de arrendamiento. En caso de tratarse de arrendamiento exclusivamente del &aacute;rea, se cotizar&aacute; separadamente su equipamiento. Asimismo, cualquier modificaci&oacute;n al alcance de suministro por parte de </span><strong><span>&ldquo;LA ARRENDADORA&rdquo;</span></strong><span>, a petici&oacute;n expresa del cliente, alterar&aacute; substancialmente la liquidaci&oacute;n final, misma que quedar&aacute; sujeta a eventuales cambios.</span></p>
                 <p ><strong><span>TERCERA.</span></strong><span>- </span><strong><span>DE LOS SERVICIOS</span></strong><span>.- El costo de arrendamiento y/o prestaci&oacute;n de servicio de Alimentos y Bebidas del (las) &aacute;rea(s)</span><strong><span>&nbsp;</span></strong><strong><u><span style="font-family: Calibri; text-transform: uppercase; text-decoration: underline; text-underline: single; font-size: 11,0000pt;"></span></u></strong><strong><span>&nbsp;</span></strong><span>materia de este contrato, ampara el servicio de mobiliario y equipo existente en el &aacute;rea solicitada del Centro &nbsp;de Convenciones de Morelia, el cual deber&aacute; ser solicitado por &nbsp;</span><strong><span>&ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>, mediante una solicitud por escrita dirigida a la Subdirecci&oacute;n de Mercadotecnia y Comercializaci&oacute;n del propio centro, con un m&iacute;nimo de cinco d&iacute;as naturales de anticipaci&oacute;n a la realizaci&oacute;n del evento materia del presente. </span></p>
-
                 <span>En caso que </span><strong><span>&ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>&nbsp;no manifieste espec&iacute;ficamente sus necesidades, el Centro de Convenciones de Morelia, no ser&aacute; responsable de dicha omisi&oacute;n.</span></p>
                 <p><strong><span>CUARTA.- PERMISOS Y AUTORIZACIONES.-</span></strong><span>&nbsp;</span><strong><span>&ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>&nbsp;cubrir&aacute; y tramitar&aacute;, por su cuenta todos permisos, licencias y de m&aacute;s requisitos que las autoridades correspondientes exijan en relaci&oacute;n con la actividad comercial o eventos que se desarrollen en el &aacute;rea materia del presente contrato.</span></p>
                 <p><strong><span>QUINTA.- DESTINO.- &ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>, se obliga a destinar el &aacute;rea arrendada &uacute;nica y exclusivamente para lo cual fue contratada no pudiendo </span><strong><span>&ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>&nbsp;darle un uso distinto a lo pactado. Igualmente, por &nbsp;ning&uacute;n motivo o concepto, podr&aacute; usar &aacute;reas o espacios mayores que los expresamente autorizados en este contrato. Asimismo, queda expresamente prohibido y convenido, que </span><strong><span>&ldquo;LA ARRENDATARIA&rdquo;</span></strong><span>&nbsp;por ning&uacute;n motivo podr&aacute; almacenar sustancias o elementos explosivos, corrosivos, inflamables o cualquier otro que puedan perjudicar al inmueble o a terceras personas, as&iacute; como tampoco sustancias prohibidas por la ley.</span></p>
@@ -140,12 +150,14 @@ table,thead,tbody,tfoot,tr, td,th{
                                 SUBDIRECTORA DE MERCADOTECNIA Y<br>
                                 COMERCIALIZACIÓN<br>
                         </div>
-                        <div class="firmas-Left">
-                                <hr class="hr2"><strong>LIC. GABRIELA LOAIZA NUÑEZ</strong><br>
-                                SUBDIRECTORA DE MERCADOTECNIA Y<br>
-                                COMERCIALIZACIÓN<br>
+                        <div class="firmas-Right">
+                                <hr class="hr2"><strong>NANCY MARIN CORONA</strong><br>
+                                GERENTE DE VENTAS<br>
+                               
                         </div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>   
-                        <hr class="hr1">   <strong>LA ARRENDATARIA</strong><br>
+                        <hr class="hr1"> <br>
+                        {{$c->client_name}}<br>
+                             <strong>LA ARRENDATARIA</strong><br>
                       <br>                    
     
                         <div style="page-break-after: always;"></div><!Salto forzoso->
@@ -159,12 +171,16 @@ table,thead,tbody,tfoot,tr, td,th{
 
                 </div>
                 <strong>
-                Nombre del evento -<u>Name</u><br><br>
+                Nombre del evento <u>{{$c->name}}</u><br><br>
                 Fecha: <u>Date</u> Hora: <u>08:00 A 15:00  HRS</u> No. De Personas: <u>0</u><br><br>
-                Lugar: -<u>Plce</u><br><br>
-                Responsable: <u>nameClient</u>  R.F.C.: <u>RFC</u>.
+                Lugar: -<u>
+                    @foreach($servLugares as $serv) 
+                    {{$serv->name}},
+                    @endforeach        
+                </u><br><br>
+                Responsable: <u>{{$c->client_name}}</u>  R.F.C.: <u>{{$c->rfc}}</u>.
                 Dirección: <u>adress</u> En la ciudad MORELIA, MICH.   C.P. <u>58000</u><br><br><br>
-                Teléfono :<u>3-33-33-33</u><br>
+                Teléfono :<u>{{$c->phone1}}</u><br>
             </strong>
 
             <table style="border:1px;  ">
@@ -176,28 +192,51 @@ table,thead,tbody,tfoot,tr, td,th{
                       </tr>
                     </thead>
                     <tbody>
+                        @foreach($servLugares as $serv)                                                     
+                            <tr>
+                              <th scope="row">{{$serv->name}}</th>
+                              <td>{{$serv->price}}</td>
+                            <td>{{$serv->count}}</td>                        
+                            </tr>
+                      @endforeach   
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        
-                      </tr>
-                      <tr>
-                            <th scope="row"></th>                           
+                            <th class="trNoBorder"></th>                           
                             <td><strong><u>Subtotal Arrendamiento</u> </strong></td>                            
                     </tr>
-    
-
                       <tr>
                             <th style="width :50%;">Otros servicios:</th>
                       </tr>
-                      
+                      @foreach($servTotal as $serv)                                                     
+                      <tr>
+                        <th scope="row">{{$serv->name}}</th>
+                        <td>{{$serv->price}}</td>
+                      <td>{{$serv->count}}</td>                        
+                      </tr>
+                @endforeach                     
                     </tbody>
-                  </table>
-
-                    
-                
+                  </table>                                  
             </div>            
+            <div style="page-break-after: always;"></div><!Salto forzoso->
+            <div class="firmas">                
+                   <strong> POR LA ARRENDADORA</strong><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <hr class="hr1">   <strong>OSCAR CELIS SILVA</strong><br>
+                    DIRECTOR GENERAL DEL<br>
+                    CENTRO DE CONVENCIONES DE MORELIA<br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div class="firmas-Left">
+                            <hr class="hr2"><strong>LIC. GABRIELA LOAIZA NUÑEZ</strong><br>
+                            SUBDIRECTORA DE MERCADOTECNIA Y<br>
+                            COMERCIALIZACIÓN<br>
+                    </div>
+                    <div class="firmas-Right">
+                            <hr class="hr2"><strong>NANCY MARIN CORONA</strong><br>
+                            GERENTE DE VENTAS<br>
+                           
+                    </div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>   
+                    <hr class="hr1"> <br>
+                    {{$c->client_name}}<br>
+                         <strong>LA ARRENDATARIA</strong><br>
+                  <br> 
+            </div>
     <script type="text/php">
         if ( isset($pdf) ) { 
             $pdf->page_script('

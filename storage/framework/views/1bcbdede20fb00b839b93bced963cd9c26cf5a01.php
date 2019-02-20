@@ -7,12 +7,14 @@ use Dompdf\Dompdf;
 
 $dompdf = new Dompdf();
 
-$data['name'] = "name";
-
-//$dompdf->setPaper('A4', 'landscape');
 
 
-$html = view('contrato', ['owo'=>'OWOWO'])->render();
+
+
+
+
+
+$html = view('contrato', $data)->render();
 //$dompdf->loadHtml(  File::get(public_path().'/html/c1.html'));
 
 $dompdf->loadHtml( $html);
@@ -24,7 +26,7 @@ $dompdf->setPaper('letter', 'portroit');
 $dompdf->render();
 
 // Output the generated PDF to Browser
-$dompdf->stream('my.pdf'.$id,array('Attachment'=>0));
+$dompdf->stream('my.pdf',array('Attachment'=>0));
      
 
 ?>
