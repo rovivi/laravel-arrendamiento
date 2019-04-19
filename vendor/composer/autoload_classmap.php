@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddDependecyToClient' => $baseDir . '/database/migrations/2019_03_31_082426_add_dependecy_to_client.php',
     'AddFkCategoryService' => $baseDir . '/database/migrations/2019_01_28_193540_add_fk_category_service.php',
     'Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',
     'CreateBackpackRevisionsTable' => $baseDir . '/database/migrations/2013_04_09_062329_create_backpack_revisions_table.php',

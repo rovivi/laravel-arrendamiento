@@ -20,8 +20,16 @@ class Client extends Model
     // public $timestamps = false;
     // protected $guarded = ['id'];
 
+
+
         protected $fillable = [
-            'name', 'rfc', 'phone1','phone2','extras','email'
+            'name', 'rfc', 'phone1','phone2','extras','email','dependency', 'col',
+            'datenum',
+            'colony',
+            'street',
+            'postal_code',
+            'city',
+            'position',
         ];    // protected $hidden = [];
     // protected $dates = [];
 

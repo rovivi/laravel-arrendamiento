@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>Sistema de arrendamiento</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -38,8 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
-                <div>This is an empty Laravel app. Backpack does not provide any front-end functionality.<br><br></div>
+                <div class="title">Laravel 5</div>                
                 <div><a href="{{ backpack_url() }}">Login to admin panel</a></div>
             </div>
         </div>

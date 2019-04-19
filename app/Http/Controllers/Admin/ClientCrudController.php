@@ -37,9 +37,9 @@ class ClientCrudController extends CrudController
           'name'      => 'name',                               
         ]);
         $this->crud->addColumn([    // SELECT
-        'label'     => 'Teléfono',
+        'label'     => 'Dependencia',
         'type'      => 'text',
-        'name'      => 'phone1',                               
+        'name'      => 'dependency',                               
         ]);
         $this->crud->addColumn([    // SELECT
       'label'     => 'R.F.C.',
@@ -64,6 +64,83 @@ class ClientCrudController extends CrudController
           ]
 
         ]);
+
+        $this->crud->addField([
+          'name' => 'dependency',
+          'type' => 'text',
+          'label' => "Dependencia",
+          'minimum_input_length' => 5,
+          'attributes' => [
+            'placeholder' => 'Nombre de la dependencia',
+            'class' => 'form-control some-class'
+          ]
+        ]);    
+
+
+          /*Direccion  */
+
+
+          $this->crud->addField([
+            'name' => 'street',
+            'type' => 'text',
+            'label' => "Calle",
+            'minimum_input_length' => 5,
+            'attributes' => [
+              'placeholder' => 'Nombre de la calle',
+              'class' => 'form-control some-class'
+            ]
+          ]); 
+
+
+
+
+          
+          $this->crud->addField([
+            'name' => 'colony',
+            'type' => 'text',
+            'label' => "Colonia",
+            'minimum_input_length' => 5,
+            'attributes' => [
+              'placeholder' => 'Nombre de la colonia',
+              'class' => 'form-control some-class'
+            ]
+          ]);    
+  
+
+
+          
+          $this->crud->addField([
+            'name' => 'datenum',
+            'type' => 'number',
+            'label' => "Numero",
+            'minimum_input_length' => 5,
+            'attributes' => [
+              'placeholder' => 'Número del domicilio',
+              'class' => 'form-control some-class'
+            ]
+          ]);    
+
+
+
+
+          $this->crud->addField([
+            'name' => 'city',
+            'type' => 'text',
+            'label' => "Cuidad",
+            'minimum_input_length' => 5,
+            'attributes' => [
+              'placeholder' => 'Morelia, Michoácan',
+              'class' => 'form-control some-class'
+            ]
+          ]);    
+
+  
+
+
+
+
+
+
         $this->crud->addField([
           'name' => 'rfc',
           'type' => 'text',
@@ -91,12 +168,12 @@ class ClientCrudController extends CrudController
             'placeholder' => 'Inserte telefono de contacto alternativo',          
           ]
         ]);
-        $this->crud->addField([
+        /*$this->crud->addField([ esto ya no 
           'name' => 'extras', 
           'tab' => "Extras",
           'type' => 'textarea',
           'label' => "Notas del cliente"
-        ]);
+        ]);*/
         $this->crud->addField([
           'name' => 'email',
           'type' => 'email',

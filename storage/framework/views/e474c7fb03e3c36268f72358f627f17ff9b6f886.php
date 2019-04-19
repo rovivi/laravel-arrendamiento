@@ -1,10 +1,52 @@
 <?php $__env->startSection('content'); ?>
+
+
+<style> 
+       
+       .coolbg{
+        background:  url("/images/bg1.png");
+       }
+       .paper {
+        background:  #fff;
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    0 20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+    /* Padding for demo purposes */
+    padding: 30px;
+}
+    section{ background:  url("/images/ceconexpo.jpg");
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 100%;      
+      }
+    
+    form,h3,{
+        background: rgba(1, 1, 1, 0.4);
+    }
+    .content-wrapper,body{
+        background: transparent;
+    }
+    .box{
+        height: 1010%;
+    }
+    </style>
+    
     <div class="row m-t-40">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 col-md-offset-4 paper"  style=" background:  url('/images/bg1.png')" >
             <h3 class="text-center m-b-20"><?php echo e(trans('backpack::base.login')); ?></h3>
-            <div class="box">
-                <div class="box-body">
-                    <form class="col-md-12 p-t-10" role="form" method="POST" action="<?php echo e(route('backpack.auth.login')); ?>">
+            <div class="box ">
+                <div class="box-body paper ">
+                    <form class=" col-md-12 p-t-10" role="form" method="POST" action="<?php echo e(route('backpack.auth.login')); ?>">
                         <?php echo csrf_field(); ?>
 
 
@@ -58,14 +100,11 @@
                     </form>
                 </div>
             </div>
-            <?php if(backpack_users_have_email()): ?>
-                <div class="text-center m-t-10"><a href="<?php echo e(route('backpack.auth.password.reset')); ?>"><?php echo e(trans('backpack::base.forgot_your_password')); ?></a></div>
-            <?php endif; ?>
-            <?php if(config('backpack.base.registration_open')): ?>
-                <div class="text-center m-t-10"><a href="<?php echo e(route('backpack.auth.register')); ?>"><?php echo e(trans('backpack::base.register')); ?></a></div>
-            <?php endif; ?>
+            <br><br><br><br><br><br><br><br><br><br>            
         </div>
+
     </div>
+    <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('backpack::layout_guest', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

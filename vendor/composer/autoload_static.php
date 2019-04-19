@@ -505,6 +505,7 @@ class ComposerStaticInit28c0acbff7e8088b3f4294fc6b27cbae
     );
 
     public static $classMap = array (
+        'AddDependecyToClient' => __DIR__ . '/../..' . '/database/migrations/2019_03_31_082426_add_dependecy_to_client.php',
         'AddFkCategoryService' => __DIR__ . '/../..' . '/database/migrations/2019_01_28_193540_add_fk_category_service.php',
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'CreateBackpackRevisionsTable' => __DIR__ . '/../..' . '/database/migrations/2013_04_09_062329_create_backpack_revisions_table.php',

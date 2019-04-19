@@ -29,7 +29,7 @@ return [
 
     // Here you may override the css-classes for the content section of the create view globally
     // To override per view use $this->crud->setCreateContentClass('class-string')
-    'create_content_class' => 'col-md-8 col-md-offset-2',
+    'create_content_class' => 'col-md-8 col-md-offset-2 ',
 
     // Here you may override the css-classes for the content section of the edit view globally
     // To override per view use $this->crud->setEditContentClass('class-string')
@@ -58,7 +58,7 @@ return [
     // How many items should be shown by default by the Datatable?
     // This value can be overwritten on a specific CRUD by calling
     // $this->crud->setDefaultPageLength(50);
-    'default_page_length' => 10,
+    'default_page_length' => 20,
 
     // A 1D array of options which will be used for both the displayed option and the value, or
     // A 2D array in which the first array is used to define the value options and the second array the displayed options

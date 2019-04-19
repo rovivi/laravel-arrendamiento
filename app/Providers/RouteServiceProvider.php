@@ -101,12 +101,8 @@ Route::any('getS/{id}', function ($id) {
 return json_encode($data1);
 });
 
-
-//Route::controller('users', 'UserController');
 Route::resource('pack', 'packService');
 
         });
-
-
     }
 }

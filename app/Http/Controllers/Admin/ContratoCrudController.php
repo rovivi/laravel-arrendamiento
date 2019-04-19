@@ -25,14 +25,19 @@ class ContratoCrudController extends CrudController
         $this->crud->setModel('App\Models\Contrato');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/contrato');
         $this->crud->setEntityNameStrings('Contrato', 'Contratos');
-
-
-
-
         $this->crud->addButtonFromModelFunction('line', 'open_google', 'generatePDF', 'end'); // add a button whose HTML is returned by a method in the CRUD model
         $this->crud->addButtonFromModelFunction('line', 'custom_services', 'editServices', 'beginning'); // add a button whose HTML is returned by a method in the CRUD model
 
-      
+        $this->crud->addColumn([    // SELECT
+            'label'     => 'No. Contrato',
+            'type'      => 'text',
+            'name'      => 'id',  
+            'attributes' => [
+                'placeholder' => 'Ingrese el nombre del evento',               
+              ]                    
+        ]);
+        
+        
         $this->crud->addColumn([    // SELECT
             'label'     => 'Nombre del evento',
             'type'      => 'text',

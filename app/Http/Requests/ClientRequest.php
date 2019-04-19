@@ -30,10 +30,11 @@ class ClientRequest extends FormRequest
             'rfc'        => 'required|min:10|max:15',
             'phone1'        => 'required|min:7|max:15',            
             'email' => 'required',
+            'postal_code' => 'min:5|max:55'
             //'birth'       => 'required|integer',
         ];
     }
-
+    
     /**
      * Get the validation attributes that apply to the request.
      *

@@ -8,8 +8,7 @@
 | to using a Closure or controller method. Build something great!
 */
 Route::get('/', function () {
-    return view('welcome');
-});
+    return redirect('/control');});
 
 Route::get('/cotiza/{id}', function ($id) {
     $data= ['id' => $id];
